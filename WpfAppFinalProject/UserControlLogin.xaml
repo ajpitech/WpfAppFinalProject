@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="WpfAppFinalProject.UserControlLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppFinalProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+        <Label>Welcome to Login Screen</Label>
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="10" Width="100" Height="25">Username :- </Label>
+            <TextBox Margin="10" Width="100" Height="25" Text="{Binding TxtUserName,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="10" Width="100" Height="25">Password :- </Label>
+            <TextBox Margin="10" Width="100" Height="25" Text="{Binding TxtPassword,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="10" Width="100" Height="25" Content="SUBMIT" Command="{Binding LoginCommand}"></Button>
+            <Button Margin="10" Width="100" Height="25" Content="CLEAR"></Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
